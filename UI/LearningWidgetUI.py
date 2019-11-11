@@ -1,0 +1,93 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'LearningWidgetUI_2.ui'
+#
+# Created by: PyQt5 UI code generator 5.9.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(806, 610)
+        self.widget = QtWidgets.QWidget(Form)
+        self.widget.setGeometry(QtCore.QRect(100, 0, 601, 541))
+        self.widget.setObjectName("widget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.widget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.scoring = QtWidgets.QLabel(self.widget)
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu")
+        font.setPointSize(24)
+        self.scoring.setFont(font)
+        self.scoring.setAlignment(QtCore.Qt.AlignCenter)
+        self.scoring.setObjectName("scoring")
+        self.verticalLayout.addWidget(self.scoring)
+        self.questionLabel = QtWidgets.QLabel(self.widget)
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu")
+        font.setPointSize(28)
+        self.questionLabel.setFont(font)
+        self.questionLabel.setAlignment(QtCore.Qt.AlignCenter)
+        self.questionLabel.setObjectName("questionLabel")
+        self.verticalLayout.addWidget(self.questionLabel)
+        self.answers_layout = QtWidgets.QVBoxLayout()
+        self.answers_layout.setContentsMargins(250, 0, 100, 40)
+        self.answers_layout.setObjectName("answers_layout")
+        self.answer_1 = QtWidgets.QRadioButton(self.widget)
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu")
+        self.answer_1.setFont(font)
+        self.answer_1.setObjectName("answer_1")
+        self.answers_layout.addWidget(self.answer_1)
+        self.answer_2 = QtWidgets.QRadioButton(self.widget)
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu")
+        self.answer_2.setFont(font)
+        self.answer_2.setObjectName("answer_2")
+        self.answers_layout.addWidget(self.answer_2)
+        self.answer_3 = QtWidgets.QRadioButton(self.widget)
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu")
+        self.answer_3.setFont(font)
+        self.answer_3.setObjectName("answer_3")
+        self.answers_layout.addWidget(self.answer_3)
+        self.verticalLayout.addLayout(self.answers_layout)
+        self.submitBtn = QtWidgets.QPushButton(self.widget)
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu")
+        self.submitBtn.setFont(font)
+        self.submitBtn.setObjectName("submitBtn")
+        self.verticalLayout.addWidget(self.submitBtn)
+        self.nextBtn = QtWidgets.QPushButton(self.widget)
+        self.nextBtn.setEnabled(True)
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu")
+        self.nextBtn.setFont(font)
+        self.nextBtn.setObjectName("nextBtn")
+        self.verticalLayout.addWidget(self.nextBtn)
+        self.finishBtn = QtWidgets.QPushButton(self.widget)
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu")
+        self.finishBtn.setFont(font)
+        self.finishBtn.setObjectName("finishBtn")
+        self.verticalLayout.addWidget(self.finishBtn)
+
+        self.retranslateUi(Form)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Form"))
+        self.scoring.setText(_translate("Form", "Score:"))
+        self.questionLabel.setText(_translate("Form", "TextLabel"))
+        self.answer_1.setText(_translate("Form", "RadioButton"))
+        self.answer_2.setText(_translate("Form", "RadioButton"))
+        self.answer_3.setText(_translate("Form", "RadioButton"))
+        self.submitBtn.setText(_translate("Form", "Submit"))
+        self.nextBtn.setText(_translate("Form", "Next"))
+        self.finishBtn.setText(_translate("Form", "Finish"))
+
