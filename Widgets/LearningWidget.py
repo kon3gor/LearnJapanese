@@ -34,25 +34,25 @@ class LearnWidget(QWidget, Ui_Form):
         self.scoring.setText("Score: 0")
         self.nextBtn.clicked.connect(self.next)
         self.set_question()
-            self.submitBtn.clicked.connect(self.submit)
-            self.finishBtn.clicked.connect(self.save_score)
+        self.submitBtn.clicked.connect(self.submit)
+        self.finishBtn.clicked.connect(self.save_score)
         
 
-        def set_question(self):
-            random_ind = random.randrange(len(self.alphabet) - 1)
-            self.questionLabel.setText(self.alphabet[random_ind])
-            self.right_answer = self.choice[random_ind]
-            tmp_choicies = self.choice[:]
-            tmp_choicies.remove(self.right_answer)
-            already = []
-            for answer in self.answers:
-                random_ind = random.randrange(len(tmp_choicies))
-                if random_ind not in already:
-                    already.append(random_ind)
-                else:
-                    pass
-                answer.setText(tmp_choicies[random_ind])
-            ind = random.randrange(3)
+    def set_question(self):
+        random_ind = random.randrange(len(self.alphabet) - 1)
+        self.questionLabel.setText(self.alphabet[random_ind])
+        self.right_answer = self.choice[random_ind]
+        tmp_choicies = self.choice[:]
+        tmp_choicies.remove(self.right_answer)
+        already = []
+        for answer in self.answers:
+            random_ind = random.randrange(len(tmp_choicies))
+            if random_ind not in already:
+                already.append(random_ind)
+            else:
+                pass
+            answer.setText(tmp_choicies[random_ind])
+        ind = random.randrange(3)
         self.answers[ind].setText(self.right_answer)
 
 
