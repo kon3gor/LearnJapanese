@@ -11,6 +11,7 @@ class App(QMainWindow):
     def __init__(self):
         super().__init__()
         self.resize(807, 584)
+        self.setFixedSize(807, 584)
         self.central_widget = QStackedWidget()
         self.setCentralWidget(self.central_widget)
 
